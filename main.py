@@ -1,16 +1,38 @@
-# This is a sample Python script.
+from termcolor import colored
+from menu import Menu
+from option import Option
+from dao import Dao
 
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+msg_color = 'yellow'
 
 
-# Press the green button in the gutter to run the script.
+def print_msg(msg):
+    print('*******************************************************')
+    print('\t', colored(msg, msg_color))
+    print('*******************************************************')
+
+
+def extract(args):
+    pass
+
+
+def search():
+    word = input('mot recherché : ')
+    result = dao.search(word)
+    if not result:
+        print('Aucune définition trouvée.')
+    for definition in result:
+        print('- {} [{}]'.format(definition[1], definition[0]))
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print_msg('Python : PDF => Dictionnaire')
+    dao = Dao()
+    menu = Menu([
+        Option('Extraire fichier PDF (BD+Fichier)', extract),
+        Option('Chercher dans Dictionnaire', search)
+        # , Option('Tests', test)
+    ])
+    while not menu.want_exit:
+        menu.show()
+    print('*******************************************************')

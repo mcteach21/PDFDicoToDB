@@ -93,14 +93,7 @@ def process(path):
     for item in extracted.items():
         print(item[0] + ' ' + item[1])
 
-    print('=================================================')
-    print(len(extracted))
-    print('=================================================')
+    # print('=================================================')
+    # print(len(extracted))
+    # print('=================================================')
 
-
-# r'C:\Users\mchouarbi\Desktop\frkab\dallet_dico_fr_kab.pdf'
-# r'C:\Users\mchouarbi\Desktop\frkab\Agemmay-n-Tmazight.pdf'
-
-if __name__ == '__main__':
-    path = r'C:\Users\mchouarbi\Desktop\BURO\ALL\frkab\dallet_dico_fr_kab.pdf'
-    process(path)

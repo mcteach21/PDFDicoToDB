@@ -2,6 +2,7 @@ from termcolor import colored
 from menu import Menu
 from option import Option
 from dao import Dao
+from pdfparser import process
 
 msg_color = 'yellow'
 
@@ -12,8 +13,9 @@ def print_msg(msg):
     print('*******************************************************')
 
 
-def extract(args):
-    pass
+def extract():
+    path = r'pdfs\dallet_dico_fr_kab.pdf'
+    process(path)
 
 
 def search():

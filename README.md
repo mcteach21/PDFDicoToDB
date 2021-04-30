@@ -1,5 +1,5 @@
 # PDFDicoToDB
 
-PDF Dictionnary (KB-FR) to Database (MySQL)
+PDF Dictionnary (FR-KAB) to Database (MySQL)
 
 Word Definition search

@@ -17,7 +17,7 @@ class Menu:
         print(colored("***************************************", self.menu_color))
 
         try:
-            num = int(input('choice (1-{}) ==> '.format(len(self.options))))
+            num = int(input('votre choix (1-{}) : '.format(len(self.options)+1)))
             self.handle_input(num)
         except:
             self.init()
